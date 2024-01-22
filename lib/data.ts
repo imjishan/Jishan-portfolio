@@ -76,7 +76,7 @@ export const projectsData = [
     imageUrl: project1,
   },
   {
-    title: "Word Analytics",
+    title: "Portfolio",
     description:
       "A Personal Portfolio to showcase my projects and skills, built using NextJS, Typescript, Tailwind CSS and Framer Motion for cool animations.",
     tags: ["React", "Next.js", "Typescript", "Tailwind", "Framer Motion"],
@@ -93,6 +93,7 @@ export const skillsData = [
   "Express",
   "Node.js",
   "MongoDB",
+  "Linux",
   "HTML",
   "Framer Motion",
   "CSS",
@@ -101,6 +102,5 @@ export const skillsData = [
   "Git",
   "Photoshop",
   "Excel",
-  "Linux",
   "Canva",
 ] as const;

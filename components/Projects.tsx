@@ -1,12 +1,17 @@
-import { projectsData } from "@/lib/data";
-import SectionHeading from "./SectionHeading";
-import React from "react";
-import Project from "@/components/Project";
+"use client";
 
-const Projects = () => {
+import React from "react";
+import SectionHeading from "./SectionHeading";
+import { projectsData } from "@/lib/data";
+import Project from "./Project";
+import { useSectionInView } from "@/lib/hooks";
+
+export default function Projects() {
+  const { ref } = useSectionInView("Projects", 0.3);
+
   return (
-    <section id="projects" className="scroll-mt-28 mb-28">
-      <SectionHeading>My Projects</SectionHeading>
+    <section ref={ref} id="projects" className="scroll-mt-28 mb-28">
+      <SectionHeading>My projects</SectionHeading>
       <div>
         {projectsData.map((project, index) => (
           <React.Fragment key={index}>
@@ -16,5 +21,4 @@ const Projects = () => {
       </div>
     </section>
   );
-};
-export default Projects;
+}

@@ -3,11 +3,13 @@
 import { motion } from "framer-motion";
 import { links } from "@/lib/data";
 import Link from "next/link";
-import { useState } from "react";
 import clsx from "clsx";
+import { useActiveSectionContext } from "@/context/active-section-context";
 
 const Header = () => {
-  const [activeSection, setActiveSection] = useState("Home");
+  const { activeSection, setActiveSection, setTimeOfLastClick } =
+    useActiveSectionContext();
+
   return (
     <header className="z-[999] relative">
       <motion.div
@@ -53,7 +55,7 @@ const Header = () => {
             >
               <Link
                 className={clsx(
-                  "flex w-full items-center px-3 py-3 hover:text-gray-100 transition ease-in-out",
+                  "flex w-full items-center px-3 py-3 transition ease-in-out",
                   {
                     "text-gray-950 dark:text-gray-200":
                       activeSection === link.name,
@@ -62,6 +64,7 @@ const Header = () => {
                 href={link.hash}
                 onClick={() => {
                   setActiveSection(link.name);
+                  setTimeOfLastClick(Date.now());
                 }}
               >
                 {link.name}
@@ -71,8 +74,8 @@ const Header = () => {
                     layoutId="activeSection"
                     transition={{
                       type: "spring",
-                      stiffness: 380,
-                      damping: 30,
+                      stiffness: 480,
+                      damping: 50,
                     }}
                   ></motion.span>
                 )}
