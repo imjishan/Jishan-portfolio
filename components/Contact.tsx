@@ -4,6 +4,7 @@ import SectionHeading from "./SectionHeading";
 import { useSectionInView } from "@/lib/hooks";
 import SubmitBtn from "./submit-btn";
 import { motion } from "framer-motion";
+import { sendEmail } from "@/actions/sendEmail";
 const Contact = () => {
   const { ref } = useSectionInView("Contact");
   return (
@@ -32,7 +33,12 @@ const Contact = () => {
         </a>{" "}
         or through this form.
       </p>
-      <form className="mt-10 flex flex-col">
+      <form
+        className="mt-10 flex flex-col"
+        action={async (formData) => {
+          const { data, error } = await sendEmail(formData);
+        }}
+      >
         <input
           className="h-14 px-4 rounded-lg borderBlack transition-all"
           name="senderEmail"
