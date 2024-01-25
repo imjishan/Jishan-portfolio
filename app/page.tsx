@@ -1,4 +1,5 @@
 import About from "@/components/About";
+import Contact from "@/components/Contact";
 import Experience from "@/components/Experience";
 import Projects from "@/components/Projects";
 import Intro from "@/components/intro";
@@ -14,6 +15,7 @@ export default function Home() {
       <Projects />
       <Skills />
       <Experience />
+      <Contact />
       {/* last tutorial was stop at the time 4:43:51 */}
     </main>
   );

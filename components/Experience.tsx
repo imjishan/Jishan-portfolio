@@ -22,11 +22,11 @@ export default function Experience() {
             <VerticalTimelineElement
               visible={true}
               contentStyle={{
-                background: "#D3D3D3",
+                background: "#e4e4e7",
                 boxShadow: "none",
                 border: "1px solid rbga(0, 0, 0, 0.05)",
                 textAlign: "left",
-                padding: "1.3rem 2rem",
+                padding: "2.3rem 3rem",
               }}
               contentArrowStyle={{
                 borderRight: "0.4rem solid #9ca3af",
