@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+
+body {
+    overflow-x: hidden;
+}
+
 html {
     --line-color: #e5e7eb;
 }

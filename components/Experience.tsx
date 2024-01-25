@@ -27,6 +27,7 @@ export default function Experience() {
                 border: "1px solid rbga(0, 0, 0, 0.05)",
                 textAlign: "left",
                 padding: "2.3rem 3rem",
+                borderRadius: "1rem",
               }}
               contentArrowStyle={{
                 borderRight: "0.4rem solid #9ca3af",

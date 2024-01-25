@@ -1,12 +1,13 @@
 "use client";
 
+import React from "react";
 import { motion } from "framer-motion";
 import { links } from "@/lib/data";
 import Link from "next/link";
 import clsx from "clsx";
 import { useActiveSectionContext } from "@/context/active-section-context";
 
-const Header = () => {
+export default function Header() {
   const { activeSection, setActiveSection, setTimeOfLastClick } =
     useActiveSectionContext();
 
@@ -29,10 +30,9 @@ const Header = () => {
             >
               <Link
                 className={clsx(
-                  "flex w-full items-center px-3 py-3 transition ease-in-out",
+                  "flex w-full items-center justify-center px-3 py-3 ease-in-out",
                   {
-                    "text-gray-950 dark:text-gray-200":
-                      activeSection === link.name,
+                    "text-gray-100": activeSection === link.name,
                   }
                 )}
                 href={link.hash}
@@ -42,13 +42,14 @@ const Header = () => {
                 }}
               >
                 {link.name}
+
                 {link.name === activeSection && (
                   <motion.span
-                    className="bg-gray-100 rounded-full absolute inset-0 -z-10 dark:bg-gray-800"
+                    className="bg-gray-900 text-white rounded-full absolute inset-0 -z-10"
                     layoutId="activeSection"
                     transition={{
                       type: "spring",
-                      stiffness: 480,
+                      stiffness: 380,
                       damping: 50,
                     }}
                   ></motion.span>
@@ -60,5 +61,4 @@ const Header = () => {
       </nav>
     </header>
   );
-};
-export default Header;
+}
