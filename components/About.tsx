@@ -1,5 +1,4 @@
 "use client";
-import SectionHeading from "./SectionHeading";
 import { useSectionInView } from "@/lib/hooks";
 
 const About = () => {
@@ -10,7 +9,9 @@ const About = () => {
       className="mb-28 max-w-[45rem] text-center leading-8 sm:mb-8 font-light scroll-mt-28"
       id="about"
     >
-      <SectionHeading>About me</SectionHeading>
+      <h2 className="text-3xl font-medium capitalize mb-8 text-center">
+        About me
+      </h2>
       <p className="mb-4 text-gray-800">
         I'm Jishan, currently navigating the academic landscape while delving
         deep into the world of web development. My days are filled with coding
