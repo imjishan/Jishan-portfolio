@@ -71,7 +71,7 @@ const Intro = () => {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
-          delay: 0.1,
+          delay: 0.4,
         }}
       >
         {/* contact */}
@@ -88,7 +88,7 @@ const Intro = () => {
         </Link>
         {/* download */}
         <a
-          className="group border border-black/10 bg-white px-7 py-3 flex items-center gap-2 cursor-pointer rounded-full outline-none focus:scale-110 hover:scale-110 transition ease-in-out"
+          className="dark:bg-white/10 group border border-black/10 bg-white px-7 py-3 flex items-center gap-2 cursor-pointer rounded-full outline-none focus:scale-110 hover:scale-110 transition ease-in-out"
           href="/CV.pdf"
           download
         >
@@ -100,7 +100,7 @@ const Intro = () => {
         <a
           href="https://www.linkedin.com/in/jishanahmed11"
           target="_blank"
-          className="bg-white p-4 cursor-pointer text-gray-700 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition border border-black/10"
+          className="bg-white p-4 cursor-pointer text-gray-700 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition border border-black/10 dark:bg-white/10 dark:text-white/60"
         >
           <BsLinkedin />
         </a>
@@ -109,7 +109,7 @@ const Intro = () => {
         <a
           href="https://github.com/imjishan"
           target="_blank"
-          className="bg-white p-4 text-gray-700 cursor-pointer flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 hover:text-gray-950 transition border border-black/10"
+          className="bg-white p-4 text-gray-700 cursor-pointer flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 hover:text-gray-950 transition border border-black/10 dark:bg-white/10 dark:text-white/60"
         >
           <BsGithub />
         </a>

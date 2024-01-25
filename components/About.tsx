@@ -12,7 +12,7 @@ const About = () => {
       <h2 className="text-3xl font-medium capitalize mb-8 text-center">
         About me
       </h2>
-      <p className="mb-4 text-gray-800">
+      <p className="mb-4 text-gray-800 dark:text-gray-200">
         I'm Jishan, currently navigating the academic landscape while delving
         deep into the world of web development. My days are filled with coding
         adventures, where I harness the power of{" "}
@@ -22,7 +22,7 @@ const About = () => {
         to bring ideas to life. Crafting seamless user experiencing and solving
         complex challenges fuel my passion for web development.
       </p>
-      <p className="text-gray-800">
+      <p className="text-gray-800 dark:text-gray-200">
         Beyond the screen, I find my escape in the virtual realms of video
         games, immersing myself in captivating storylines. To maintain balance,
         I'm equally committed to physical well-being, incorporating workouts
